@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 게시판</title>
+    <style>
+        body {
+
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        header {
+            background-color: white;
+            color: black; /*제목*/
+            text-align: center;
+            /* padding: 20px 0; */
+        }
+        main {
+            max-width: 1000px;
+            margin: 20px auto;
+            /* padding: 0 20px; */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border-bottom: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: white;
+            color: black;
+        }
+        tr:nth-child(even) {
+            background-color: white;
+        }
+        .pagination {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .pagination a {/*페이지버튼*/
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 0 5px;
+            background-color: white;
+            border: 1px solid black;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .pagination a:hover {
+            background-color: #b2b3b4;
+        }
+        .write-button { /*글쓰기 버튼*/
+            background-color: #cfe0f1;
+            border: 1px solid black;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+        }
+        .write-button:hover {
+            background-color: #82bcfa;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>영화 게시판</h1>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>글 번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>조회수</th>
+                    <th>등록일</th>
+                    <th>페이지 번호</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>1</td>
+                    <td>영화 제목 1</td>
+                    <td>작성자1</td>
+                    <td>100</td>
+                    <td>2024-02-12</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>영화 제목 2</td>
+                    <td>작성자2</td>
+                    <td>150</td>
+                    <td>2024-02-11</td>
+                    <td>1</td>
+                </tr>
+            
+            </tbody>
+        </table>
+        <div class="pagination">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+        </div>
+        <button class="write-button"><a href="write.html" style="text-decoration:none; color: black;">글쓰기</a></button>
+    </main>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시물 작성</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        #post-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #post-form h2 {
+            margin-top: 0;
+        }
+        #post-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        #post-form input[type="text"],
+        #post-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        #post-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #post-form button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>게시물 작성</h1>
+    </header>
+    <main>
+        <section id="post-form">
+          
+            <h2>새로운 게시물 작성</h2>
+            <form id="new-post-form">
+                <label for="title">제목:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="content">내용:</label>
+                <textarea id="content" name="content" rows="4" required></textarea>
+                <button type="submit">작성</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 게시판</p>
+    </footer>
+    <script>
+       
+        document.getElementById('new-post-form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+        
+            var title = document.getElementById('title').value;
+            var content = document.getElementById('content').value;
+
+           
+            console.log('게시물 제목:', title);
+            console.log('게시물 내용:', content);
+
+            
+            window.location.href = "submit.html"; 
+        });
+    </script>
+    
+</body>
+
+</html>

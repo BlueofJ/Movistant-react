@@ -1,0 +1,65 @@
+<html lang="ko">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>회원 가입</title>
+
+<link rel="stylesheet" href="reg1.css">
+
+<style>
+
+    div {width :800px; margin: 0 } 
+    header {background: url('theater.png');width: 1850px;height: 200px;
+        border: 1px solid rgb(10, 10, 10);text-align: center;line-height : 120px;}
+    h1{ color: white;font-size: 30px;}    
+</style>
+
+
+
+</head>
+
+<body>
+    <div>
+        <header>
+            <h1>영화추천이 필요할 땐</h1>
+        </header>
+    </div>
+   
+    <form id="signup">
+        <fieldset>
+            <legend>로그인 정보</legend>
+            <ul>
+                <li>
+                    <label for="userid">ID</label>
+                    <input id="userid" name="userid" type="text" required autofocus>
+                </li>
+                <li>
+                    <label for="pwd1">password</label>
+                    <input id="pwd1" name="pwd1" type="password" required>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+    
+            <button type="button" id="loginButton">Log in</button>
+        </fieldset>
+    </form>
+    
+    <script>
+        
+        document.getElementById('loginButton').addEventListener('click', function() {
+         
+            var userId = document.getElementById('userid').value;
+            var password = document.getElementById('pwd1').value;
+            
+         
+            window.location.href = "submit.html";
+        });
+    </script>
+    
+
+</body>
+
+</html>
